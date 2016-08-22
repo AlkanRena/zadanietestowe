@@ -1,0 +1,16 @@
+header{
+    position: absolute;
+    max-height: 5vh;
+    width: 100%;
+
+    display: flex !important;
+    flex-direction: row;
+}
+
+header > div {
+    margin: auto;
+}
+
+main {
+    padding-top: 5vh;
+}
