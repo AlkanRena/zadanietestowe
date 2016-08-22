@@ -1,6 +1,10 @@
+body {
+    font-family: Oswald, Lato, Roboto;
+}
+
 header{
     position: absolute;
-    max-height: 5vh;
+    min-height: 10vh;
     width: 100%;
 
     display: flex !important;
@@ -12,5 +16,47 @@ header > div {
 }
 
 main {
-    padding-top: 5vh;
+    padding-top: 10vh;
+
+    display: flex;
+    justify-content: center;
+}
+
+.flex {
+    display: flex;
+}
+
+.questionStyle {
+    font-size: x-large;
+}
+
+.inputBoxStyle {
+    width: 100%;
+}
+
+.headerFlex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.headerLeft {
+    display: flex;
+    flex-flow: row;
+}
+
+.headerRight {
+    display: flex;
+    flex-flow: row;
+}
+
+.columnFlex {
+    display: flex;
+    flex-flow: column;
+}
+
+
+
+.centerQuestionBox {
+    display: flex;
+
 }
