@@ -59,4 +59,21 @@ main {
 .centerQuestionBox {
     display: flex;
 
+    height: 20vh;
+
+    background-color: grey;
+}
+
+.centerQuestionBoxLeft {
+    display: flex;
+    justify-content: center;
+}
+
+.centerQuestionBoxMiddle {
+    display: flex;
+}
+
+.centerQuestionBoxRight {
+    display: flex;
+    justify-content: center;
 }

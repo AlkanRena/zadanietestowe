@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="questionApp">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
@@ -9,6 +9,9 @@
 <link rel="stylesheet" type="text/css" href="styles/reset.css">
     <link rel="stylesheet" type="text/css" href="styles/main.css">
 
+
+    <script src="scripts/angular.js"></script>
+    <script src="scripts/app.js"></script>
 </head>
 <body>
 <header>
@@ -39,13 +42,22 @@
     <div class="col-xs-2"></div>
 </header>
 
-<main>
-<div class="col-xs-8 centerQuestionBox">
-    What
-</div>
+<main ng-controller="QuestionController">
+    <ul class="col-xs-8">
+        <li class="centerQuestionBox" ng-repeat="question in questions">
+            <div class="col-xs-2 centerQuestionBoxLeft">What</div>
+            <div class="col-xs-7 centerQuestionBoxMiddle">
+                <span>{{question.name}}</span>
+                <span>{{question.askedQuestion}}</span>
+            </div>
+            <div class="col-xs-3 centerQuestionBoxRight">it</div>
+        </li>
+    </ul>
+
 </main>
 <footer>
     <!--Here unused but still in code -->
 </footer>
+
 </body>
 </html>
