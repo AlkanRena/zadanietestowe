@@ -1,0 +1,26 @@
+<div class="questionBox">
+    <ul class="innerQuestionBox col-xs-8">
+        <li class="centerQuestionBox" ng-repeat="question in questions">
+            <div class="col-xs-2 centerQuestionBoxLeft">
+                <div><img src="{{question.photo}}"></div>
+                <span>ASKED</span>
+            </div>
+            <div class="col-xs-7 centerQuestionBoxMiddle">
+                <div class="centerQuestionBoxMiddleTop">
+                    <span>{{question.name}}<span> IS ASKING:</span></span>
+                    <span class="itallic">{{question.askedQuestion}}</span>
+                </div>
+                <div class="centerQuestionBoxMiddleBottom">
+                    <ul>
+                        <li ng-repeat="">
+
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-xs-3 centerQuestionBoxRight">
+
+            </div>
+        </li>
+    </ul>
+</div>

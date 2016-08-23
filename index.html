@@ -8,6 +8,7 @@
 <link rel="stylesheet" type="text/css" href="styles/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="styles/reset.css">
     <link rel="stylesheet" type="text/css" href="styles/main.css">
+    <link rel="stylesheet" type="text/css" href="styles/questionBoxStyle.css">
 
 
     <script src="scripts/angular.js"></script>
@@ -15,14 +16,13 @@
 </head>
 <body>
 <header>
-    <div class="col-xs-2">
-        back
+    <div class="col-xs-2 backButton">
     </div>
     <div class="col-xs-6">
         <div class="headerFlex">
             <div class="headerLeft">
                 <span class="questionStyle">Questions</span>
-                <div>Add new</div>
+                <div class="addingButton"></div>
             </div>
             <div class="headerRight">
                 <div><input type="radio">My shelf</div>
@@ -42,18 +42,36 @@
     <div class="col-xs-2"></div>
 </header>
 
-<main ng-controller="QuestionController">
-    <ul class="col-xs-8">
-        <li class="centerQuestionBox" ng-repeat="question in questions">
-            <div class="col-xs-2 centerQuestionBoxLeft">What</div>
-            <div class="col-xs-7 centerQuestionBoxMiddle">
-                <span>{{question.name}}</span>
-                <span>{{question.askedQuestion}}</span>
-            </div>
-            <div class="col-xs-3 centerQuestionBoxRight">it</div>
-        </li>
-    </ul>
 
+<main ng-controller="QuestionController">
+    <question-box-field></question-box-field>
+
+    <!--<div class="questionBox">-->
+        <!--<ul class="innerQuestionBox col-xs-8">-->
+            <!--<li class="centerQuestionBox" ng-repeat="question in questions">-->
+                <!--<div class="col-xs-2 centerQuestionBoxLeft">-->
+                    <!--<div><img src="{{question.photo}}"></div>-->
+                    <!--<span>ASKED</span>-->
+                <!--</div>-->
+                <!--<div class="col-xs-7 centerQuestionBoxMiddle">-->
+                    <!--<div class="centerQuestionBoxMiddleTop">-->
+                        <!--<span>{{question.name}}<span> IS ASKING:</span></span>-->
+                        <!--<span class="itallic">{{question.askedQuestion}}</span>-->
+                    <!--</div>-->
+                    <!--<div class="centerQuestionBoxMiddleBottom">-->
+                        <!--<ul>-->
+                            <!--<li ng-repeat="">-->
+
+                            <!--</li>-->
+                        <!--</ul>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div class="col-xs-3 centerQuestionBoxRight">-->
+
+                <!--</div>-->
+            <!--</li>-->
+        <!--</ul>-->
+    <!--</div>-->
 </main>
 <footer>
     <!--Here unused but still in code -->

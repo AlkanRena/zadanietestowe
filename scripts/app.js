@@ -5,16 +5,31 @@ questionApp.controller('QuestionController', function QuestionListController($sc
     $scope.questions = [
         {
             name: 'Eva',
-            photo: 'something',
+            photo: 'images/evaPhoto.png',
             askedQuestion: 'Will insulin make my patient gain weight?'
         }, {
             name: 'Andrew',
-            photo: 'something',
+            photo: 'images/andrewPhoto.png',
             askedQuestion: 'Vegan diet in diabetes treatment?'
         }, {
             name: 'Joseph',
-            photo: 'something',
+            photo: 'images/josephPhoto.png',
             askedQuestion: 'Vegan diet to stop diabetes progress'
         }
     ];
+    $scope.CommentAndAnswear = [
+        {
+            name: '',
+            photo: '',
+            type: ''
+        }
+    ]
+});
+
+questionApp.directive('questionBoxField', function () {
+return {
+    restrict: 'E',
+    templateUrl: 'htmlDirectives/questionBoxResult.html'
+}
+
 });

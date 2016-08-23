@@ -7,6 +7,8 @@ header{
     min-height: 10vh;
     width: 100%;
 
+    background-color: white;
+
     display: flex !important;
     flex-direction: row;
 }
@@ -18,8 +20,41 @@ header > div {
 main {
     padding-top: 10vh;
 
+
+    background-color: #ffe1ad;
+
+
     display: flex;
     justify-content: center;
+}
+
+.backButton {
+    background-image: url('../images/Backbutton.png');
+    height: 42px;
+    background-repeat: no-repeat;
+    background-size: 42px 42px;
+    background-position: center;
+}
+
+.addingButton {
+    background-image: url('../images/addingbutton.png');
+    height: 26px;
+    width: 26px;
+    background-repeat: no-repeat;
+    background-size: 26px 26px;
+}
+
+.questionBox {
+    display: flex;
+    justify-content: center;
+    margin: 0 5vw 5vh 5vw;
+    background-color: #fbfbfb;
+    min-height: 85vh;
+    min-width: 90vw;
+}
+
+.innerQuestionBox {
+    background-color: white;
 }
 
 .flex {
@@ -55,25 +90,3 @@ main {
 }
 
 
-
-.centerQuestionBox {
-    display: flex;
-
-    height: 20vh;
-
-    background-color: grey;
-}
-
-.centerQuestionBoxLeft {
-    display: flex;
-    justify-content: center;
-}
-
-.centerQuestionBoxMiddle {
-    display: flex;
-}
-
-.centerQuestionBoxRight {
-    display: flex;
-    justify-content: center;
-}

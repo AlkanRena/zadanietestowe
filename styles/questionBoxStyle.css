@@ -1,0 +1,70 @@
+
+.centerQuestionBox {
+    display: flex;
+
+    height: 26vh;
+
+    background-color: grey;
+}
+
+.centerQuestionBoxLeft {
+    display: flex;
+    justify-content: center;
+    align-content: space-between;
+    flex-wrap: wrap;
+    background-color: #dff3fd;
+}
+
+.centerQuestionBoxLeft > div {
+    align-self: flex-start;
+    padding-top: 2vh;
+}
+
+.centerQuestionBoxLeft > span {
+    align-self: flex-end;
+    padding: 0.5vh 2vw 2vh 2vw;
+
+    color: grey;
+
+    border-top: solid 2px black;
+}
+
+.centerQuestionBoxMiddle {
+    display: flex;
+    flex-flow: column;
+    padding: 0;
+}
+
+.centerQuestionBoxMiddleTop {
+    background-color: #dff3fd;
+    height: 14vh;
+    width: 100%;
+
+    color: #0266b3;
+
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+}
+
+.centerQuestionBoxMiddleTop >span > span {
+    color: black;
+}
+
+.itallic {
+    font-style: italic;
+}
+
+.centerQuestionBoxMiddleBottom {
+    background-color: white;
+    height: 100%;
+    width: 100%;
+}
+
+
+
+.centerQuestionBoxRight {
+    display: flex;
+    justify-content: center;
+    background-color: white;
+}
