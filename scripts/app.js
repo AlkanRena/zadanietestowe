@@ -6,45 +6,108 @@ questionApp.controller('QuestionController', function QuestionListController($sc
         {
             name: 'Eva',
             photo: 'images/evaPhoto.png',
-            askedQuestion: 'Will insulin make my patient gain weight?'
+            askedQuestion: 'Will insulin make my patient gain weight?',
+            id: '1'
         }, {
             name: 'Andrew',
             photo: 'images/andrewPhoto.png',
-            askedQuestion: 'Vegan diet in diabetes treatment?'
+            askedQuestion: 'Vegan diet in diabetes treatment?',
+            id: '2'
         }, {
             name: 'Joseph',
             photo: 'images/josephPhoto.png',
-            askedQuestion: 'Vegan diet to stop diabetes progress'
+            askedQuestion: 'Vegan diet to stop diabetes progress',
+            id: '3'
         }
     ];
     $scope.CommentAndAnswear = [
         {
-            name: 'Alex',
+            id: '1',
             photo: 'images/josephPhoto.png',
             type: 'ANSWERED'
         },
         {
-            name: 'Alex',
+            id: '3',
             photo: 'images/josephPhoto.png',
             type: 'COMMENTED'
         },
         {
-            name: 'Alex',
+            id: '3',
             photo: 'images/josephPhoto.png',
             type: 'COMMENTED'
         },
         {
-            name: 'Alex',
+            id: '2',
             photo: 'images/josephPhoto.png',
             type: 'COMMENTED'
         },
         {
-            name: 'John',
+            id: '1',
             photo: 'images/josephPhoto.png',
             type: 'COMMENTED'
         },
         {
-            name: 'Mick',
+            id: '3',
+            photo: 'images/josephPhoto.png',
+            type: 'COMMENTED'
+        },
+        {
+            id: '1',
+            photo: 'images/josephPhoto.png',
+            type: 'ANSWERED'
+        },
+        {
+            id: '3',
+            photo: 'images/josephPhoto.png',
+            type: 'COMMENTED'
+        },
+        {
+            id: '3',
+            photo: 'images/josephPhoto.png',
+            type: 'COMMENTED'
+        },
+        {
+            id: '2',
+            photo: 'images/josephPhoto.png',
+            type: 'COMMENTED'
+        },
+        {
+            id: '1',
+            photo: 'images/josephPhoto.png',
+            type: 'COMMENTED'
+        },
+        {
+            id: '3',
+            photo: 'images/josephPhoto.png',
+            type: 'COMMENTED'
+        },
+        {
+            id: '1',
+            photo: 'images/josephPhoto.png',
+            type: 'ANSWERED'
+        },
+        {
+            id: '3',
+            photo: 'images/josephPhoto.png',
+            type: 'COMMENTED'
+        },
+        {
+            id: '3',
+            photo: 'images/josephPhoto.png',
+            type: 'COMMENTED'
+        },
+        {
+            id: '2',
+            photo: 'images/josephPhoto.png',
+            type: 'COMMENTED'
+        },
+        {
+            id: '1',
+            photo: 'images/josephPhoto.png',
+            type: 'COMMENTED'
+        },
+        {
+            id: '3',
             photo: 'images/josephPhoto.png',
             type: 'COMMENTED'
         },

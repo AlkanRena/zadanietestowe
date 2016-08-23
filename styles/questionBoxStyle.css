@@ -70,16 +70,15 @@
 
 }
 
-.centerQuestionBoxMiddleBottom > ul > li {
-
-}
-
-
 .centerQuestionBoxRight {
     display: flex;
-    justify-content: center;
-    flex-flow: column;
+    align-items: center;
+    flex-flow: column-reverse;
     background-color: white;
+}
+
+.centerQuestionBoxRight  span {
+    padding-bottom: 3vh;
 }
 
 .answearPost {
@@ -111,5 +110,9 @@
 
     border-top: solid 2px;
 
+    align-self: center;
+}
+
+.alignCenterLenght {
     align-self: center;
 }

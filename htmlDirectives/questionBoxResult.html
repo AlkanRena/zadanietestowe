@@ -12,7 +12,7 @@
                 </div>
                 <div class="centerQuestionBoxMiddleBottom">
                     <ul>
-                        <li ng-repeat="CandM in CommentAndAnswear | limitTo:3">
+                        <li ng-repeat="CandM in CommentAndAnswear |filter: question.id | limitTo:3">
                             <div class="answearPost">
                                 <img src="{{CandM.photo}}">
                                 <div>{{CandM.type}}</div>
@@ -20,7 +20,7 @@
                         </li>
                         <li>
                             <div class="answearPost">
-                                <div>{{CommentAndAnswear.length}}</div>
+                                <div class="alignCenterLenght">{{(CommentAndAnswear |filter: question.id).length}}</div>
                                 <div>
                                     <span>more activities</span>
                                 </div>
