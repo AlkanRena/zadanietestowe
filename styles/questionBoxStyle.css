@@ -2,7 +2,9 @@
 .centerQuestionBox {
     display: flex;
 
-    height: 26vh;
+    height: 40vh;
+
+    margin-bottom: 4vh;
 
     background-color: grey;
 }
@@ -22,7 +24,8 @@
 
 .centerQuestionBoxLeft > span {
     align-self: flex-end;
-    padding: 0.5vh 2vw 2vh 2vw;
+    padding: 0.5vh 2vw 0vh 2vw;
+    margin-bottom: 5vh;
 
     color: grey;
 
@@ -37,7 +40,7 @@
 
 .centerQuestionBoxMiddleTop {
     background-color: #dff3fd;
-    height: 14vh;
+    height: 15vh;
     width: 100%;
 
     color: #0266b3;
@@ -47,7 +50,7 @@
     justify-content: center;
 }
 
-.centerQuestionBoxMiddleTop >span > span {
+.centerQuestionBoxMiddleTop > span > span {
     color: black;
 }
 
@@ -61,10 +64,52 @@
     width: 100%;
 }
 
+.centerQuestionBoxMiddleBottom > ul {
+    display: flex;
+    flex-flow: row-reverse;
+
+}
+
+.centerQuestionBoxMiddleBottom > ul > li {
+
+}
 
 
 .centerQuestionBoxRight {
     display: flex;
     justify-content: center;
+    flex-flow: column;
     background-color: white;
+}
+
+.answearPost {
+
+    margin: 7vh 0 0 2vw;
+
+    background-color: grey;
+    min-height: 22vh;
+    min-width: 10vw;
+    display: flex;
+    justify-content: space-around;
+    flex-flow: column;
+    align-content: stretch;
+}
+
+.answearPost > img {
+    padding: 1vh auto 10vh auto;
+    max-height: 50px;
+    width: 52px;
+    align-self: center;
+    font-size: 1em;
+}
+
+
+.answearPost > div:nth-child(2) {
+    padding: 1vh 0 0 0;
+
+
+
+    border-top: solid 2px;
+
+    align-self: center;
 }

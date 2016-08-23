@@ -19,10 +19,35 @@ questionApp.controller('QuestionController', function QuestionListController($sc
     ];
     $scope.CommentAndAnswear = [
         {
-            name: '',
-            photo: '',
-            type: ''
-        }
+            name: 'Alex',
+            photo: 'images/josephPhoto.png',
+            type: 'ANSWERED'
+        },
+        {
+            name: 'Alex',
+            photo: 'images/josephPhoto.png',
+            type: 'COMMENTED'
+        },
+        {
+            name: 'Alex',
+            photo: 'images/josephPhoto.png',
+            type: 'COMMENTED'
+        },
+        {
+            name: 'Alex',
+            photo: 'images/josephPhoto.png',
+            type: 'COMMENTED'
+        },
+        {
+            name: 'John',
+            photo: 'images/josephPhoto.png',
+            type: 'COMMENTED'
+        },
+        {
+            name: 'Mick',
+            photo: 'images/josephPhoto.png',
+            type: 'COMMENTED'
+        },
     ]
 });
 

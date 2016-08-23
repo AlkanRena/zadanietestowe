@@ -1,25 +1,38 @@
 <div class="questionBox">
-    <ul class="innerQuestionBox col-xs-8">
+    <ul class="innerQuestionBox col-xs-10">
         <li class="centerQuestionBox" ng-repeat="question in questions">
             <div class="col-xs-2 centerQuestionBoxLeft">
-                <div><img src="{{question.photo}}"></div>
+            <div><img src="{{question.photo}}"></div>
                 <span>ASKED</span>
             </div>
-            <div class="col-xs-7 centerQuestionBoxMiddle">
+            <div class="col-xs-8 centerQuestionBoxMiddle">
                 <div class="centerQuestionBoxMiddleTop">
                     <span>{{question.name}}<span> IS ASKING:</span></span>
                     <span class="itallic">{{question.askedQuestion}}</span>
                 </div>
                 <div class="centerQuestionBoxMiddleBottom">
                     <ul>
-                        <li ng-repeat="">
-
+                        <li ng-repeat="CandM in CommentAndAnswear | limitTo:3">
+                            <div class="answearPost">
+                                <img src="{{CandM.photo}}">
+                                <div>{{CandM.type}}</div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="answearPost">
+                                <div>{{CommentAndAnswear.length}}</div>
+                                <div>
+                                    <span>more activities</span>
+                                </div>
+                            </div>
                         </li>
                     </ul>
                 </div>
             </div>
-            <div class="col-xs-3 centerQuestionBoxRight">
-
+            <div class="col-xs-2 centerQuestionBoxRight">
+                <span>related discussions</span>
+                <span>peers involved</span>
+                <span>conversations</span>
             </div>
         </li>
     </ul>
