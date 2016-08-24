@@ -15,17 +15,25 @@
     align-content: space-between;
     flex-wrap: wrap;
     background-color: #dff3fd;
+
+    font-size: 1vw;
 }
 
-.centerQuestionBoxLeft > div {
+.centerQuestionBoxLeft div {
     align-self: flex-start;
-    padding-top: 2vh;
+
+    margin: 2vh auto;
+}
+
+.centerQuestionBoxLeft  div img {
+    max-height: 7.5vh;
+    width: 7.8vh;
 }
 
 .centerQuestionBoxLeft > span {
     align-self: flex-end;
-    padding: 0.5vh 2vw 0vh 2vw;
-    margin-bottom: 5vh;
+    padding: 0.5vh 1vw 0 1vw;
+    margin: auto auto 5vh auto;
 
     color: grey;
 
@@ -42,7 +50,7 @@
     background-color: #dff3fd;
     height: 15vh;
     width: 100%;
-
+    padding-left: 2vw;
     color: #0266b3;
 
     display: flex;
@@ -67,6 +75,7 @@
 .centerQuestionBoxMiddleBottom > ul {
     display: flex;
     flex-flow: row-reverse;
+    font-size: 1vw;
 
 }
 
@@ -85,9 +94,9 @@
 
     margin: 7vh 0 0 2vw;
 
-    background-color: grey;
+    background-color: lightgrey;
     min-height: 22vh;
-    min-width: 10vw;
+    min-width: 9vw;
     display: flex;
     justify-content: space-around;
     flex-flow: column;
@@ -96,8 +105,8 @@
 
 .answearPost > img {
     padding: 1vh auto 10vh auto;
-    max-height: 50px;
-    width: 52px;
+    max-height: 7.5vh;
+    width: 7.8vh;
     align-self: center;
     font-size: 1em;
 }

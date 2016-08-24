@@ -1,7 +1,7 @@
 
 var questionApp = angular.module('questionApp', []);
 
-questionApp.controller('QuestionController', function QuestionListController($scope) {
+questionApp.controller('QuestionController', function QuestionListController($scope, $http) {
     $scope.questions = [
         {
             name: 'Eva',
@@ -20,6 +20,8 @@ questionApp.controller('QuestionController', function QuestionListController($sc
             id: '3'
         }
     ];
+    
+
     $scope.CommentAndAnswear = [
         {
             id: '1',
@@ -110,7 +112,7 @@ questionApp.controller('QuestionController', function QuestionListController($sc
             id: '3',
             photo: 'images/josephPhoto.png',
             type: 'COMMENTED'
-        },
+        }
     ]
 });
 
