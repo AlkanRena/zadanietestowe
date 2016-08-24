@@ -1,7 +1,31 @@
 
 var questionApp = angular.module('questionApp', []);
 
-questionApp.controller('QuestionController', function QuestionListController($scope, $http) {
+questionApp.controller('QuestionController', function QuestionListController($scope) {
+
+    $scope.userProfileLunch = function(lunch){
+        return {
+            restrict: 'E',
+            replace: true,
+            template: 'htmlDirectives/userProfile.html'
+        }
+    };
+
+    $scope.userProfile = [
+        {
+            profileid: '1',
+            photo: '',
+            name: 'Eva',
+            signUpDate: '1',
+            lastseen: '1',
+            activityLevel: '2',
+            peers: '23',
+            discussions: '29',
+            findings: '19',
+            questions: '10'
+        }
+    ];
+
     $scope.questions = [
         {
             name: 'Eva',
@@ -122,4 +146,6 @@ return {
     templateUrl: 'htmlDirectives/questionBoxResult.html'
 }
 
+
 });
+

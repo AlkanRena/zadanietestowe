@@ -2,7 +2,7 @@
     <ul class="innerQuestionBox col-xs-10">
         <li class="centerQuestionBox" ng-repeat="question in questions">
             <div class="col-xs-1 centerQuestionBoxLeft">
-            <div><img src="{{question.photo}}"></div>
+            <button ng-click="userProfileLunch()"><img src="{{question.photo}}"></button>
                 <span>ASKED</span>
             </div>
             <div class="col-xs-9 centerQuestionBoxMiddle">
