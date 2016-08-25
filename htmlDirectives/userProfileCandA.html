@@ -1,14 +1,14 @@
-<div id="showProfile"  class="profile-detail" ng-hide="showProfile">
-    <div><a href ng-click="showProfile = ! showProfile">X</a></div>
+<div id="showProfile"  class="profile-detail" ng-hide="showProfile2">
+    <div><a href ng-click="showProfile2 = ! showProfile2">X</a></div>
     <div>
         <div>
-            <img src="{{question.photo}}" alt="{{question.name}}">
+            <img src="{{canda.photo}}" alt="{{canda.name}}">
         </div>
         <div>
-            {{question.name}}
+            {{canda.name}}
         </div>
     </div>
-    <div ng-repeat="info in userProfile | filter: {profileid: question.profileid }">
+    <div ng-repeat="info in userProfile | filter: {profileid: canda.profileid }">
         <div>
             MEMBER FOR: {{info.signUpDate}} Months
         </div>
@@ -19,7 +19,7 @@
             ACTIVITY LEVEL {{info.activityLevel}}/3
         </div>
     </div>
-    <div ng-repeat="info in userProfile | filter: {profileid: question.profileid }">
+    <div ng-repeat="info in userProfile | filter: {profileid: canda.profileid }">
         <div>
             <button>left</button>
             <span>How it all started</span>

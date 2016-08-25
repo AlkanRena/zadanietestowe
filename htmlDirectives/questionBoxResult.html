@@ -1,63 +1,8 @@
 <div class="questionBox">
     <ul class="innerQuestionBox col-xs-10">
         <li class="centerQuestionBox" ng-repeat="question in questions">
-            <!--<profile-id-page class="profile-detail" ng-hide="showProfile"></profile-id-page>-->
-            <div id="showProfile"  class="profile-detail" ng-hide="showProfile">
-                <div><a href ng-click="showProfile = ! showProfile">X</a></div>
-                <div>
-                    <div>
-                        <img src="{{question.photo}}" alt="{{question.name}}">
-                    </div>
-                    <div>
-                        {{question.name}}
-                    </div>
-                </div>
-                <div ng-repeat="info in userProfile | filter:question.profileid:true">
-                    <div>
-                        MEMBER FOR: {{info.signUpDate}} Months
-                    </div>
-                    <div>
-                        LAST SEEN: {{info.lastseen}} day/days
-                    </div>
-                    <div>
-                        ACTIVITY LEVEL {{info.activityLevel}}/3
-                    </div>
-                </div>
-                <div>
-                    <div>
-                        <button>left</button>
-                        <span>How it all started</span>
-                        <button>right</button>
-                    </div>
-                    <div>THAT'S WHAT WE HAVE BEEN THESE number MONTHS AGO</div>
-                    <div>
-                        <div>peers</div>
-                        <div>disccusions</div>
-                        <div>findings</div>
-                        <div>questions</div>
-                    </div>
-                    <div>
-                        <span>WHO JOINED THE PLATFORM THAT SAME PERIOD</span>
-                        <ul ng-repeat="">
-                            <div><img></div>
-                            <span>name</span>
-                        </ul>
-                    </div>
-                    <div>
-                        <span>THE HOTTEST DISCUSSION THESE DAYS</span>
-                        <img src="" alt="">
-                        <span>name FOUND THE GUARDIAN ARTICLE</span>
-                        <span>question</span>
-                        <div>
-                            <span>count peers involved</span>
-                            <span>related discussion</span>
-                            <span>conversations</span>
-                            <span>upvotes</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
+            <profile-id-page class="profile-detail" ng-hide="showProfile"></profile-id-page>
 
             <div class="col-xs-1 centerQuestionBoxLeft">
             <a href ng-click="showProfile = ! showProfile"><img src="{{question.photo}}"></a>
@@ -70,9 +15,10 @@
                 </div>
                 <div class="centerQuestionBoxMiddleBottom">
                     <ul>
-                        <li ng-repeat="canda in commentAndAnswear |filter: question.id | limitTo:4">
+                        <li ng-repeat="canda in candafillterd = (commentAndAnswear |filter: question.id | limitTo:4)">
                             <div class="answearPost">
-                                <img src="{{canda.photo}}">
+                                <profile-id-page-2 class="profile-detail" ng-hide="showProfile2"></profile-id-page-2>
+                                <a href ng-click="showProfile2 = ! showProfile2"><img src="{{canda.photo}}"></a>
                                 <div>{{canda.type}}</div>
                             </div>
                         </li>
@@ -92,64 +38,6 @@
                 <span>peers involved</span>
                 <span>conversations</span>
             </div>
-
-            <div class="profile-detail" ng-hide="showProfile">
-                <div><a href ng-click="showProfile = ! showProfile">X</a></div>
-                <div>
-                    <div>
-                        <img src="{{question.photo}}" alt="{{question.name}}">
-                    </div>
-                    <div>
-                        {{question.name}}
-                    </div>
-                </div>
-                <div ng-repeat="info in userProfile | filter: {profileid: '({{question.profileid}})', name: '({{question.name}})'}">
-                    <div>
-                        MEMBER FOR: {{info.signUpDate}} Months
-                    </div>
-                    <div>
-                        LAST SEEN: {{info.lastseen}} day/days
-                    </div>
-                    <div>
-                        ACTIVITY LEVEL {{info.activityLevel}}/3
-                    </div>
-                </div>
-                <div>
-                    <div>
-                        <button>left</button>
-                        <span>How it all started</span>
-                        <button>right</button>
-                    </div>
-                    <div>THAT'S WHAT WE HAVE BEEN THESE number MONTHS AGO</div>
-                    <div>
-                        <div>peers</div>
-                        <div>disccusions</div>
-                        <div>findings</div>
-                        <div>questions</div>
-                    </div>
-                    <div>
-                        <span>WHO JOINED THE PLATFORM THAT SAME PERIOD</span>
-                        <ul ng-repeat="">
-                            <div><img></div>
-                            <span>name</span>
-                        </ul>
-                    </div>
-                    <div>
-                        <span>THE HOTTEST DISCUSSION THESE DAYS</span>
-                        <img src="" alt="">
-                        <span>name FOUND THE GUARDIAN ARTICLE</span>
-                        <span>question</span>
-                        <div>
-                            <span>count peers involved</span>
-                            <span>related discussion</span>
-                            <span>conversations</span>
-                            <span>upvotes</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
         </li>
     </ul>
 </div>
