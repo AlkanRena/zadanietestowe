@@ -84,18 +84,21 @@ questionApp.controller('QuestionController', function QuestionListController($sc
             name: 'Eva',
             photo: 'images/evaPhoto.png',
             askedQuestion: 'Will insulin make my patient gain weight?',
+            askedQuestionText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas mattis nunc ipsum, a bibendum mi porttitor ut. Phasellus at sem nec augue elementum eleifend eget vel dolor. Vestibulum gravida est quis nisl rutrum porttitor eget sit amet mauris. Donec in ornare nulla. Nam dignissim tincidunt vehicula. Aliquam est magna, ullamcorper id ante at, sodales malesuada dolor. Nullam id dolor aliquam, hendrerit mauris sit amet, placerat eros. Aenean facilisis neque dapibus condimentum viverra. Proin pharetra leo at nisl dignissim, id feugiat diam luctus. Nunc tempor odio pretium, euismod neque sed, porttitor leo. Aenean porta lorem nibh, ac congue sem semper non. ',
             id: '1'
         }, {
             profileid: '2',
             name: 'Andrew',
             photo: 'images/andrewPhoto.png',
             askedQuestion: 'Vegan diet in diabetes treatment?',
+            askedQuestionText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas mattis nunc ipsum, a bibendum mi porttitor ut. Phasellus at sem nec augue elementum eleifend eget vel dolor. Vestibulum gravida est quis nisl rutrum porttitor eget sit amet mauris. Donec in ornare nulla. Nam dignissim tincidunt vehicula. Aliquam est magna, ullamcorper id ante at, sodales malesuada dolor. Nullam id dolor aliquam, hendrerit mauris sit amet, placerat eros. Aenean facilisis neque dapibus condimentum viverra. Proin pharetra leo at nisl dignissim, id feugiat diam luctus. Nunc tempor odio pretium, euismod neque sed, porttitor leo. Aenean porta lorem nibh, ac congue sem semper non. ',
             id: '2'
         }, {
             profileid: '3',
             name: 'Joseph',
             photo: 'images/josephPhoto.png',
             askedQuestion: 'Vegan diet to stop diabetes progress',
+            askedQuestionText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas mattis nunc ipsum, a bibendum mi porttitor ut. Phasellus at sem nec augue elementum eleifend eget vel dolor. Vestibulum gravida est quis nisl rutrum porttitor eget sit amet mauris. Donec in ornare nulla. Nam dignissim tincidunt vehicula. Aliquam est magna, ullamcorper id ante at, sodales malesuada dolor. Nullam id dolor aliquam, hendrerit mauris sit amet, placerat eros. Aenean facilisis neque dapibus condimentum viverra. Proin pharetra leo at nisl dignissim, id feugiat diam luctus. Nunc tempor odio pretium, euismod neque sed, porttitor leo. Aenean porta lorem nibh, ac congue sem semper non. ',
             id: '3'
         }
     ];
@@ -105,115 +108,195 @@ questionApp.controller('QuestionController', function QuestionListController($sc
             id: '1',
             profileid: '2',
             photo: 'images/andrewPhoto.png',
-            type: 'ANSWERED'
+            type: 'ANSWERED',
+            date: '',
+            votes: '',
+            messageText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
         },
         {
             id: '3',
             profileid: '3',
             photo: 'images/josephPhoto.png',
-            type: 'COMMENTED'
+            type: 'COMMENTED',
+            date: '',
+            votes: '',
+            messageText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+
         },
         {
             id: '3',
             profileid: '4',
             photo: 'images/halimaPhoto.png',
-            type: 'COMMENTED'
+            type: 'COMMENTED',
+            date: '',
+            votes: '',
+            messageText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+
         },
         {
             id: '2',
             profileid: '6',
             photo: 'images/patriciaPhoto.png',
-            type: 'COMMENTED'
+            type: 'COMMENTED',
+            date: '',
+            votes: '',
+            messageText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+
         },
         {
             id: '1',
             profileid: '6',
             photo: 'images/patriciaPhoto.png',
-            type: 'COMMENTED'
+            type: 'COMMENTED',
+            date: '',
+            votes: '',
+            messageText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+
         },
         {
             id: '3',
             profileid: '4',
             photo: 'images/halimaPhoto.png',
-            type: 'COMMENTED'
+            type: 'COMMENTED',
+            date: '',
+            votes: '',
+            messageText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+
         },
         {
             id: '1',
             profileid: '5',
             photo: 'images/waweruPhoto.png',
-            type: 'ANSWERED'
+            type: 'ANSWERED',
+            date: '',
+            votes: '',
+            messageText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+
         },
         {
             id: '3',
             profileid: '6',
             photo: 'images/patriciaPhoto.png',
-            type: 'COMMENTED'
+            type: 'COMMENTED',
+            date: '',
+            votes: '',
+            messageText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+
         },
         {
             id: '3',
             profileid: '2',
             photo: 'images/andrewPhoto.png',
-            type: 'COMMENTED'
+            type: 'COMMENTED',
+            date: '',
+            votes: '',
+            messageText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+
         },
         {
             id: '2',
             profileid: '3',
             photo: 'images/josephPhoto.png',
-            type: 'COMMENTED'
+            type: 'COMMENTED',
+            date: '',
+            votes: '',
+            messageText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+
         },
         {
             id: '1',
             profileid: '4',
             photo: 'images/halimaPhoto.png',
-            type: 'COMMENTED'
+            type: 'COMMENTED',
+            date: '',
+            votes: '',
+            messageText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+
         },
         {
             id: '3',
             profileid: '1',
             photo: 'images/evaPhoto.png',
-            type: 'COMMENTED'
+            type: 'COMMENTED',
+            date: '',
+            votes: '',
+            messageText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+
         },
         {
             id: '1',
             profileid: '2',
             photo: 'images/andrewPhoto.png',
-            type: 'ANSWERED'
+            type: 'ANSWERED',
+            date: '',
+            votes: '',
+            messageText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+
         },
         {
             id: '3',
             profileid: '5',
             photo: 'images/waweruPhoto.png',
-            type: 'COMMENTED'
+            type: 'COMMENTED',
+            date: '',
+            votes: '',
+            messageText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+
         },
         {
             id: '3',
             profileid: '6',
             photo: 'images/patriciaPhoto.png',
-            type: 'COMMENTED'
+            type: 'COMMENTED',
+            date: '',
+            votes: '',
+            messageText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+
         },
         {
             id: '2',
             profileid: '4',
             photo: 'images/halimaPhoto.png',
-            type: 'COMMENTED'
+            type: 'COMMENTED',
+            date: '',
+            votes: '',
+            messageText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+
         },
         {
             id: '1',
             profileid: '2',
             photo: 'images/andrewPhoto.png',
-            type: 'COMMENTED'
+            type: 'COMMENTED',
+            date: '',
+            votes: '',
+            messageText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+
         },
         {
             id: '3',
             profileid: '6',
             photo: 'images/patriciaPhoto.png',
-            type: 'COMMENTED'
+            type: 'COMMENTED',
+            date: '',
+            votes: '',
+            messageText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+
         }
     ];
 
     $scope.showProfile = true;
 
     $scope.showProfile2 = true;
+
+    $scope.showmoreactivite = true;
+    //     if () {
+    //
+    //     }
+    // else {
+    //         false
+    //     }
+
 });
 
 questionApp.directive('questionBoxField', function () {

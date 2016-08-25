@@ -19,15 +19,22 @@
     font-size: 1vw;
 }
 
-.centerQuestionBoxLeft div {
+.centerQuestionBoxLeft {
+
+}
+
+.centerQuestionBoxLeft a {
     align-self: flex-start;
 
     margin: 2vh auto;
 }
 
-.centerQuestionBoxLeft  div img {
+.centerQuestionBoxLeft a img {
+
     max-height: 7.5vh;
-    width: 7.8vh;
+    width: 7.54vh;
+
+    border-radius: 50%;
 }
 
 .centerQuestionBoxLeft > span {
@@ -103,25 +110,51 @@
     align-content: stretch;
 }
 
-.answearPost > img {
-    padding: 1vh auto 10vh auto;
+.answearSum {
+
+    margin: 7vh 0 0 2vw;
+
+    min-height: 22vh;
+    min-width: 9vw;
+    display: flex;
+    justify-content: space-around;
+    flex-flow: column;
+    align-content: stretch;
+    align-items: center;
+}
+
+.answearPost a {
+    display: flex;
+}
+
+.answearPost a img {
+    margin: 1vh auto 10vh auto;
     max-height: 7.5vh;
-    width: 7.8vh;
+    width: 7.5vh;
     align-self: center;
     font-size: 1em;
+
+    border-radius: 50%;
 }
 
 
-.answearPost > div:nth-child(2) {
+.showTypeStyle {
     padding: 1vh 0 0 0;
-
-
-
+    margin: auto auto 4vh auto;
     border-top: solid 2px;
-
     align-self: center;
 }
 
 .alignCenterLenght {
-    align-self: center;
+    margin:  3vh auto 0;
+    display: flex;
+    font-size: 4vh;
+}
+
+.showMoreStyle {
+    align-self: flex-end;
+    margin: 0 auto;
+    font-size: 2vh;
+    font-style: italic;
+    text-align: center;
 }
