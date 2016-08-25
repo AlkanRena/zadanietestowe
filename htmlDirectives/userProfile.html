@@ -1,22 +1,22 @@
-<div>
-    <div>X close</div>
+<div id="showProfile"  class="profile-detail" ng-hide="showProfile">
+    <div><a href ng-click="showProfile = ! showProfile">X</a></div>
     <div>
         <div>
-            FOTO
+            <img src="{{question.photo}}" alt="{{question.name}}">
         </div>
         <div>
-            NAME
+            {{question.name}}
         </div>
     </div>
-    <div>
+    <div ng-repeat="info in userProfile | filter: question.profileid">
         <div>
-            MEMBER FOR:
+            MEMBER FOR: {{info.signUpDate}} Months
         </div>
         <div>
-            LAST SEEN:
+            LAST SEEN: {{info.lastseen}} day/days
         </div>
         <div>
-            ACTIVITY LEVEL
+            ACTIVITY LEVEL {{info.activityLevel}}/3
         </div>
     </div>
     <div>

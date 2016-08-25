@@ -1,0 +1,16 @@
+
+#showProfile {
+    position: fixed;
+
+    top: 2vh;
+    left: 10vw;
+    right: 10vw;
+    bottom: 8vh;
+
+    height: 90vh;
+    width: 80vw;
+
+    z-index: 1;
+
+    background-color: white;
+}

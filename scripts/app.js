@@ -3,18 +3,10 @@ var questionApp = angular.module('questionApp', []);
 
 questionApp.controller('QuestionController', function QuestionListController($scope) {
 
-    $scope.userProfileLunch = function(lunch){
-        return {
-            restrict: 'E',
-            replace: true,
-            template: 'htmlDirectives/userProfile.html'
-        }
-    };
-
     $scope.userProfile = [
         {
             profileid: '1',
-            photo: '',
+            photo: 'images/evaPhoto.png',
             name: 'Eva',
             signUpDate: '1',
             lastseen: '1',
@@ -23,30 +15,44 @@ questionApp.controller('QuestionController', function QuestionListController($sc
             discussions: '29',
             findings: '19',
             questions: '10'
+        },
+        {
+            profileid: '2',
+            photo: 'images/andrewPhoto.png',
+            name: 'Andrew',
+            signUpDate: '6',
+            lastseen: '4',
+            activityLevel: '1',
+            peers: '50',
+            discussions: '19',
+            findings: '59',
+            questions: '7'
         }
     ];
 
     $scope.questions = [
         {
+            profileid: '1',
             name: 'Eva',
             photo: 'images/evaPhoto.png',
             askedQuestion: 'Will insulin make my patient gain weight?',
             id: '1'
         }, {
+            profileid: '2',
             name: 'Andrew',
             photo: 'images/andrewPhoto.png',
             askedQuestion: 'Vegan diet in diabetes treatment?',
             id: '2'
         }, {
+            profileid: '3',
             name: 'Joseph',
             photo: 'images/josephPhoto.png',
             askedQuestion: 'Vegan diet to stop diabetes progress',
             id: '3'
         }
     ];
-    
 
-    $scope.CommentAndAnswear = [
+    $scope.commentAndAnswear = [
         {
             id: '1',
             photo: 'images/josephPhoto.png',
@@ -54,7 +60,7 @@ questionApp.controller('QuestionController', function QuestionListController($sc
         },
         {
             id: '3',
-            photo: 'images/josephPhoto.png',
+            photo: 'images/andrewPhoto.png',
             type: 'COMMENTED'
         },
         {
@@ -64,7 +70,7 @@ questionApp.controller('QuestionController', function QuestionListController($sc
         },
         {
             id: '2',
-            photo: 'images/josephPhoto.png',
+            photo: 'images/andrewPhoto.png',
             type: 'COMMENTED'
         },
         {
@@ -79,7 +85,7 @@ questionApp.controller('QuestionController', function QuestionListController($sc
         },
         {
             id: '1',
-            photo: 'images/josephPhoto.png',
+            photo: 'images/andrewPhoto.png',
             type: 'ANSWERED'
         },
         {
@@ -137,15 +143,21 @@ questionApp.controller('QuestionController', function QuestionListController($sc
             photo: 'images/josephPhoto.png',
             type: 'COMMENTED'
         }
-    ]
+    ];
+
+    $scope.showProfile = true
 });
 
 questionApp.directive('questionBoxField', function () {
 return {
     restrict: 'E',
     templateUrl: 'htmlDirectives/questionBoxResult.html'
-}
-
-
+};
 });
 
+questionApp.directive('profileIdPage', function(){
+return{
+    restrict: 'E',
+    templateUrl: 'htmlDirectives/userProfile.html'
+}
+});

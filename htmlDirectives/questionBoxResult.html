@@ -1,8 +1,66 @@
 <div class="questionBox">
     <ul class="innerQuestionBox col-xs-10">
         <li class="centerQuestionBox" ng-repeat="question in questions">
+            <!--<profile-id-page class="profile-detail" ng-hide="showProfile"></profile-id-page>-->
+            <div id="showProfile"  class="profile-detail" ng-hide="showProfile">
+                <div><a href ng-click="showProfile = ! showProfile">X</a></div>
+                <div>
+                    <div>
+                        <img src="{{question.photo}}" alt="{{question.name}}">
+                    </div>
+                    <div>
+                        {{question.name}}
+                    </div>
+                </div>
+                <div ng-repeat="info in userProfile | filter:question.profileid:true">
+                    <div>
+                        MEMBER FOR: {{info.signUpDate}} Months
+                    </div>
+                    <div>
+                        LAST SEEN: {{info.lastseen}} day/days
+                    </div>
+                    <div>
+                        ACTIVITY LEVEL {{info.activityLevel}}/3
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <button>left</button>
+                        <span>How it all started</span>
+                        <button>right</button>
+                    </div>
+                    <div>THAT'S WHAT WE HAVE BEEN THESE number MONTHS AGO</div>
+                    <div>
+                        <div>peers</div>
+                        <div>disccusions</div>
+                        <div>findings</div>
+                        <div>questions</div>
+                    </div>
+                    <div>
+                        <span>WHO JOINED THE PLATFORM THAT SAME PERIOD</span>
+                        <ul ng-repeat="">
+                            <div><img></div>
+                            <span>name</span>
+                        </ul>
+                    </div>
+                    <div>
+                        <span>THE HOTTEST DISCUSSION THESE DAYS</span>
+                        <img src="" alt="">
+                        <span>name FOUND THE GUARDIAN ARTICLE</span>
+                        <span>question</span>
+                        <div>
+                            <span>count peers involved</span>
+                            <span>related discussion</span>
+                            <span>conversations</span>
+                            <span>upvotes</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
             <div class="col-xs-1 centerQuestionBoxLeft">
-            <button ng-click="userProfileLunch()"><img src="{{question.photo}}"></button>
+            <a href ng-click="showProfile = ! showProfile"><img src="{{question.photo}}"></a>
                 <span>ASKED</span>
             </div>
             <div class="col-xs-9 centerQuestionBoxMiddle">
@@ -12,15 +70,15 @@
                 </div>
                 <div class="centerQuestionBoxMiddleBottom">
                     <ul>
-                        <li ng-repeat="CandM in CommentAndAnswear |filter: question.id | limitTo:4">
+                        <li ng-repeat="canda in commentAndAnswear |filter: question.id | limitTo:4">
                             <div class="answearPost">
-                                <img src="{{CandM.photo}}">
-                                <div>{{CandM.type}}</div>
+                                <img src="{{canda.photo}}">
+                                <div>{{canda.type}}</div>
                             </div>
                         </li>
                         <li>
                             <div class="answearPost">
-                                <div class="alignCenterLenght">{{(CommentAndAnswear |filter: question.id).length -4}}</div>
+                                <div class="alignCenterLenght">{{(commentAndAnswear |filter: question.id).length -4}}</div>
                                 <div>
                                     <span>more activities</span>
                                 </div>
@@ -34,6 +92,64 @@
                 <span>peers involved</span>
                 <span>conversations</span>
             </div>
+
+            <div class="profile-detail" ng-hide="showProfile">
+                <div><a href ng-click="showProfile = ! showProfile">X</a></div>
+                <div>
+                    <div>
+                        <img src="{{question.photo}}" alt="{{question.name}}">
+                    </div>
+                    <div>
+                        {{question.name}}
+                    </div>
+                </div>
+                <div ng-repeat="info in userProfile | filter: {profileid: '({{question.profileid}})', name: '({{question.name}})'}">
+                    <div>
+                        MEMBER FOR: {{info.signUpDate}} Months
+                    </div>
+                    <div>
+                        LAST SEEN: {{info.lastseen}} day/days
+                    </div>
+                    <div>
+                        ACTIVITY LEVEL {{info.activityLevel}}/3
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <button>left</button>
+                        <span>How it all started</span>
+                        <button>right</button>
+                    </div>
+                    <div>THAT'S WHAT WE HAVE BEEN THESE number MONTHS AGO</div>
+                    <div>
+                        <div>peers</div>
+                        <div>disccusions</div>
+                        <div>findings</div>
+                        <div>questions</div>
+                    </div>
+                    <div>
+                        <span>WHO JOINED THE PLATFORM THAT SAME PERIOD</span>
+                        <ul ng-repeat="">
+                            <div><img></div>
+                            <span>name</span>
+                        </ul>
+                    </div>
+                    <div>
+                        <span>THE HOTTEST DISCUSSION THESE DAYS</span>
+                        <img src="" alt="">
+                        <span>name FOUND THE GUARDIAN ARTICLE</span>
+                        <span>question</span>
+                        <div>
+                            <span>count peers involved</span>
+                            <span>related discussion</span>
+                            <span>conversations</span>
+                            <span>upvotes</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
         </li>
     </ul>
 </div>
