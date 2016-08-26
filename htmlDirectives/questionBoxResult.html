@@ -11,7 +11,10 @@
             <div class="col-xs-9 centerQuestionBoxMiddle">
                 <div class="centerQuestionBoxMiddleTop">
                     <span>{{question.name}}<span> IS ASKING:</span></span>
-                    <span class="itallic">{{question.askedQuestion}}</span>
+                    <span class="itallic">
+                        <a href ng-click="singleQuestion = ! singleQuestion">{{question.askedQuestion}}</a>
+                    </span>
+                    <single-question ng-hide="singleQuestion"></single-question>
                 </div>
                 <div class="centerQuestionBoxMiddleBottom">
                     <ul>

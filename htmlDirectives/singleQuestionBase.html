@@ -1,44 +1,38 @@
-<div class="col-xs-12">
+<div class="col-xs-12 singleQuestionStyle">
     <div class="singleQuestionHeader">
-        <div class="singleQuestionHeaderLeft">
-            <img src="" alt="">
+        <div class="col-xs-2"  ng-click="singleQuestion = ! singleQuestion">
+            <button class="backButton"> < </button>
         </div>
-        <div class="singleQuestionHeaderCenter">
-            <span>
-
-            </span>
-            <img src="" alt="">
+        <div class="col-xs-8">
+            <div>
+                <div class="singleQuestionHeaderCenter">
+                    <span class="questionStyle">QUESTIONS</span>
+                    <div class="addingButton"></div>
+                </div>
+            </div>
         </div>
-        <div class="singleQuestionHeaderRight">
-            <span>
+        <div class="col-xs-2" singleQuestionHeaderRight></div>
+    </div>
+    <div class="singleQuestionMain">
+        <div class="col-xs-1 singleQuestionBoxLeft">
+            <a href ng-click="showProfile = ! showProfile"><img src="{{question.photo}}"></a>
+        </div>
+        <div class="col-xs-9 singleQuestionBoxMiddle">
+            <div class="centersingleBoxMiddleTop">
+                <span>{{question.name}}<span> IS ASKING:</span></span>
+                <span class="itallic">{{question.askedQuestion}}</span>
+            </div>
+            <div class="singleQuestionBoxMiddleBottom">
+                {{question.askedQuestionText}}
 
-            </span>
-            <span>
-
-            </span>
-            <span>
-
-            </span>
+            </div>
+        </div>
+        <div class="col-xs-2 centerQuestionBoxRight">
+            <span>count</span>
+            <span>upvotes</span>
+            <span>strzałki</span>
         </div>
     </div>
 
-    <div class="col-xs-1 singleQuestionBoxLeft">
-        <a href ng-click="showProfile = ! showProfile"><img src="{{question.photo}}"></a>
-    </div>
-    <div class="col-xs-9 singleQuestionBoxMiddle">
-        <div class="centersingleBoxMiddleTop">
-            <span>{{question.name}}<span> IS ASKING:</span></span>
-            <span class="itallic">{{question.askedQuestion}}</span>
-        </div>
-        <div class="singleQuestionBoxMiddleBottom">
-            {{question.askedQuestionText}}
-
-        </div>
-    </div>
-    <div class="col-xs-2 centerQuestionBoxRight">
-        <span>count</span>
-        <span>upvotes</span>
-        <span>strzałki</span>
-    </div>
 
 </div>

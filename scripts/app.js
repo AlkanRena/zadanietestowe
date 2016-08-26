@@ -290,6 +290,8 @@ questionApp.controller('QuestionController', function QuestionListController($sc
     $scope.showProfile2 = true;
 
     $scope.showmoreactivite = true;
+    
+    $scope.singleQuestion = true;
     //     if () {
     //
     //     }
@@ -317,5 +319,12 @@ questionApp.directive('profileIdPage2', function(){
     return{
         restrict: 'E',
         templateUrl: 'htmlDirectives/userProfileCandA.html'
+    }
+});
+
+questionApp.directive('singleQuestion', function(){
+    return{
+        restrict: 'E',
+        templateUrl: 'htmlDirectives/singleQuestionBase.html'
     }
 });

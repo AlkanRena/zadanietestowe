@@ -23,11 +23,14 @@ main {
 }
 
 .backButton {
-    background-image: url('../images/Backbutton.png');
-    height: 42px;
-    background-repeat: no-repeat;
-    background-size: 42px 42px;
-    background-position: center;
+    border-radius: 50%;
+    border: 4px grey solid;
+    height: 6vh;
+    width: 6vh;
+    font-size: 3vh;
+    font-weight: 900;
+
+    background-color: white;
 }
 
 .addingButton {
