@@ -13,13 +13,17 @@
         </div>
         <div class="col-xs-2" singleQuestionHeaderRight></div>
     </div>
+
     <div class="singleQuestionMain">
         <div class="col-xs-1 singleQuestionBoxLeft">
             <a href ng-click="showProfile = ! showProfile"><img src="{{question.photo}}"></a>
         </div>
         <div class="col-xs-9 singleQuestionBoxMiddle">
-            <div class="centersingleBoxMiddleTop">
-                <span>{{question.name}}<span> IS ASKING:</span></span>
+            <div class="singleQuestionBoxMiddleTop">
+                <span>
+                    <span>{{question.name}}</span>
+                    IS ASKING:
+                </span>
                 <span class="itallic">{{question.askedQuestion}}</span>
             </div>
             <div class="singleQuestionBoxMiddleBottom">
@@ -27,7 +31,7 @@
 
             </div>
         </div>
-        <div class="col-xs-2 centerQuestionBoxRight">
+        <div class="col-xs-2 singleQuestionBoxRight">
             <span>count</span>
             <span>upvotes</span>
             <span>strzałki</span>

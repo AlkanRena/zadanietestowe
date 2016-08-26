@@ -41,6 +41,51 @@
 .singleQuestionMain {
     min-height: 80vh;
     height: auto;
-    border-left: 5vh solid #ffe1ad;
-    border-right: 5vh solid #ffe1ad;
+    border-left: 5vw solid #ffe1ad;
+    border-right: 5vw solid #ffe1ad;
+    padding-left: 15vw;
+    padding-right: 15vw;
+}
+
+.singleQuestionBoxLeft {
+    display: flex;
+    align-items: flex-start;
+    padding: 4vh auto;
+    min-height: 20vh;
+
+    background-color: #dff3fd;
+}
+
+.singleQuestionBoxLeft > a {
+    padding-top: 2vh;
+}
+
+.singleQuestionBoxLeft > a > img {
+    height: 3vw;
+    width: 3vw;
+    border-radius: 50%;
+}
+
+.singleQuestionBoxMiddle {
+    padding: 0;
+}
+
+.singleQuestionBoxMiddleTop {
+    min-height: 5vw;
+    display: flex;
+    flex-flow: column;
+    padding-top: 3vh;
+    padding-left: 4vw;
+
+    background-color: #dff3fd;
+
+
+}
+
+.singleQuestionBoxMiddleBottom {
+
+}
+
+.singleQuestionBoxRight {
+
 }
