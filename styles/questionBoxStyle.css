@@ -2,7 +2,7 @@
 .centerQuestionBox {
     display: flex;
 
-    height: 40vh;
+    height: 46vh;
 
     margin-bottom: 4vh;
 
@@ -55,7 +55,7 @@
 
 .centerQuestionBoxMiddleTop {
     background-color: #dff3fd;
-    height: 15vh;
+    height: 20vh;
     width: 100%;
     padding-left: 2vw;
     color: #0266b3;
@@ -88,13 +88,21 @@
 
 .centerQuestionBoxRight {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
+    flex-wrap: nowrap;
     flex-flow: column-reverse;
     background-color: white;
+    padding-left: 2vw;
 }
 
-.centerQuestionBoxRight  span {
-    padding-bottom: 3vh;
+.centerQuestionBoxRight  div {
+    font-size: 1.3vh;
+    margin: 4vh 0;
+}
+
+.centerQuestionBoxRight > div > span:nth-child(2) {
+
+    font-style: italic;
 }
 
 .answearPost {

@@ -1,45 +1,63 @@
 <div id="showProfile"  class="profile-detail" ng-hide="showProfile2">
-    <div><a href ng-click="showProfile2 = ! showProfile2">X</a></div>
-    <div>
+    <div class="closesign"><a href ng-click="showProfile2 = ! showProfile2">X</a></div>
+    <div ng-repeat="info in userProfile = userProfile | filter: {profileid: canda.profileid }">
+        <div class="flexProfilePhoto">
+            <img src="{{info.photo}}" alt="{{info.name}}">
+        </div>
+        <div class="flexProfileName">
+            {{info.name}}
+        </div>
+    </div>
+    <div
+            class="flexUpInfoProfile"
+            ng-repeat="info in userProfile | filter: {profileid: canda.profileid }">
         <div>
-            <img src="{{canda.photo}}" alt="{{canda.name}}">
+            MEMBER FOR: <span>{{info.signUpDate}} Months</span>
         </div>
         <div>
-            {{canda.name}}
+            LAST SEEN: <span>{{info.lastseen}} day/days</span>
+        </div>
+        <div>
+            ACTIVITY LEVEL: <span>{{info.activityLevel}}/3</span>
         </div>
     </div>
     <div ng-repeat="info in userProfile | filter: {profileid: canda.profileid }">
-        <div>
-            MEMBER FOR: {{info.signUpDate}} Months
+        <div class="flexProfileInfoTop">
+            <button> < </button>
+            <span class="flexProfileInfoTopTitle">How it all started</span>
+            <button > > </button>
         </div>
-        <div>
-            LAST SEEN: {{info.lastseen}} day/days
+        <div class="flexProfileInfoMiddleTitle">
+            THAT'S WHAT WE HAVE BEEN THESE {{info.signUpDate}} MONTHS AGO
         </div>
-        <div>
-            ACTIVITY LEVEL {{info.activityLevel}}/3
+        <div class="flexProfileInfoMiddle">
+            <div>
+                <span>{{info.peers}}</span>
+                <span>peers</span>
+            </div>
+            <div>
+                <span>{{info.discussions}}</span>
+                <span>disccusions</span>
+            </div>
+            <div>
+                <span>{{info.findings}}</span>
+                <span>findings</span>
+            </div>
+            <div>
+                <span>{{info.questions}}</span>
+                <span>questions</span>
+            </div>
         </div>
-    </div>
-    <div ng-repeat="info in userProfile | filter: {profileid: canda.profileid }">
-        <div>
-            <button>left</button>
-            <span>How it all started</span>
-            <button>right</button>
-        </div>
-        <div>THAT'S WHAT WE HAVE BEEN THESE {{info.signUpDate}} MONTHS AGO</div>
-        <div>
-            <div>{{info.peers}} peers</div>
-            <div>{{info.discussions}} disccusions</div>
-            <div>{{info.findings}}findings</div>
-            <div>{{info.questions}}questions</div>
-        </div>
-        <div>
+        <div class="flexProfileInfoBottom">
             <span>WHO JOINED THE PLATFORM THAT SAME PERIOD</span>
-            <ul ng-repeat="">
-                <div><img></div>
-                <span>name</span>
-            </ul>
+            <div>
+                <ul ng-repeat="infodate in userProfile | filter: {signUpDate: info.signUpDate, name: '!' +info.name} | limitTo:3">
+                    <div><img src="{{infodate.photo}}"></div>
+                    <span>{{infodate.name}}</span>
+                </ul>
+            </div>
         </div>
-        <div>
+        <div class="flexProfileInfoHottest">
             <span>THE HOTTEST DISCUSSION THESE DAYS</span>
             <img src="" alt="">
             <span>name FOUND THE GUARDIAN ARTICLE</span>
