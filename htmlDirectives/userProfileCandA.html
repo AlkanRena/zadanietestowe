@@ -51,22 +51,30 @@
         <div class="flexProfileInfoBottom">
             <span>WHO JOINED THE PLATFORM THAT SAME PERIOD</span>
             <div>
-                <ul ng-repeat="infodate in userProfile | filter: {signUpDate: info.signUpDate, name: '!' +info.name} | limitTo:3">
-                    <div><img src="{{infodate.photo}}"></div>
+                <ul
+                        ng-repeat="infodate in userProfile
+                        | filter: {signUpDate: info.signUpDate, name: '!' +info.name}
+                        | limitTo:3">
+                    <div>
+                        <img src="{{infodate.photo}}">
+                    </div>
                     <span>{{infodate.name}}</span>
                 </ul>
             </div>
         </div>
-        <div class="flexProfileInfoHottest">
-            <span>THE HOTTEST DISCUSSION THESE DAYS</span>
-            <img src="" alt="">
-            <span>name FOUND THE GUARDIAN ARTICLE</span>
-            <span>question</span>
+        <div class="flexProfileInfoHottest" ng-repeat="infoTheBest in questions | filter: {id: 2}">
+            <span class="flexProfileInfoHottestTitle">THE HOTTEST DISCUSSION THESE DAYS</span>
+            <img src="{{infoTheBest.photo}}" alt="{{infoTheBest.name}}">
             <div>
-                <span>count peers involved</span>
-                <span>related discussion</span>
-                <span>conversations</span>
-                <span>upvotes</span>
+                <span class="flexProfileInfoHottestName">{{infoTheBest.name}}</span>
+                <span class="flexProfileInfoHottestArticle"> FOUND THE GUARDIAN ARTICLE</span>
+            </div>
+            <span class="flexProfileInfoHottestQuestion">{{infoTheBest.askedQuestion}}</span>
+            <div class="flexProfileInfoHottestInfo">
+                <span><h3>3</h3> peers involved</span>
+                <span><h3>5</h3> related discussion</span>
+                <span><h3>3  </h3> conversations</span>
+                <span><h3>4  </h3> upvotes</span>
             </div>
         </div>
     </div>
